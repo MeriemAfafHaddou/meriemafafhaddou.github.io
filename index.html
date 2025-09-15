@@ -117,7 +117,7 @@
             <li><img src="./assets/images/python.svg" alt="Python" height="56"></li>
             <li><img src="./assets/images/flask.svg" alt="Flask" height="56"></li>
             <li><img src="./assets/images/dart.svg" alt="Dart" height="56"></li>
-            <li><img src="./assets/images/Flutter.svg" alt="Flutter" height="56"></li>
+            <li><img src="./assets/images/flutter.svg" alt="Flutter" height="56"></li>
             <li><img src="./assets/images/javascript.svg" alt="JavaScript" height="56"></li>
             <li><img src="./assets/images/git.svg" alt="Git" height="56"></li>
             <li><img src="./assets/images/gerrit.svg" alt="Gerrit" height="56"></li>
@@ -214,6 +214,9 @@
             <li class="filter-item">
               <button class="active" data-filter-btn>All</button>
             </li>
+             <li class="filter-item">
+              <button data-filter-btn>Software Systems</button>
+            </li>
             <li class="filter-item">
               <button data-filter-btn>Machine Learning</button>
             </li>
@@ -224,7 +227,7 @@
               <button data-filter-btn>Web Dev</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>Others</button>
+              <button data-filter-btn>IoT</button>
             </li>
           </ul>
 
@@ -241,6 +244,9 @@
                 <button data-select-item>All</button>
               </li>
               <li class="select-item">
+                <button data-select-item>Software Systems</button>
+              </li>
+              <li class="select-item">
                 <button data-select-item>Machine Learning</button>
               </li>
               <li class="select-item">
@@ -250,12 +256,25 @@
                 <button data-select-item>Web Dev</button>
               </li>
               <li class="select-item">
-                <button data-select-item>Others</button>
+                <button data-select-item>IoT</button>
               </li>
             </ul>
           </div>
 
           <ul class="project-list">
+             <li class="project-item active" data-filter-item data-category="software systems">
+              <button class="project-link" data-project="ivr">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/ivr.jpg" alt="Interactive Voice Response System" loading="lazy">
+                </figure>
+                <h3 class="project-title">Interactive Voice Response</h3>
+                <p class="project-category">Software Systems</p>
+              </button>
+            </li>
+
             <li class="project-item active" data-filter-item data-category="machine learning">
               <button class="project-link" data-project="relio">
                 <figure class="project-img">
@@ -334,7 +353,7 @@
               </button>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="others">
+            <li class="project-item active" data-filter-item data-category="iot">
               <button class="project-link" data-project="smartmailbox">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -343,20 +362,7 @@
                   <img src="./assets/images/iot.jpg" alt="Smart Mailbox IoT Project" loading="lazy">
                 </figure>
                 <h3 class="project-title">Smart Mailbox</h3>
-                <p class="project-category">Others</p>
-              </button>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="others">
-              <button class="project-link" data-project="ivr">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/ivr.jpg" alt="Interactive Voice Response System" loading="lazy">
-                </figure>
-                <h3 class="project-title">Interactive Voice Response</h3>
-                <p class="project-category">Others</p>
+                <p class="project-category">IoT</p>
               </button>
             </li>
           </ul>

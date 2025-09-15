@@ -174,11 +174,11 @@ const projectData = {
         <li>Validated through experiments on supervised and unsupervised learning models</li>
       </ul>
 
-      <h2>Technologies Used</h2>
+      <h2>Technologies</h2>
       <div class="project-details-tech">
         <span class="tech-icons">
           <img src="./assets/images/python.svg" alt="Python" title="Python" class="tech-icon">
-          <img src="./assets/images/pot.png" alt="POT" title="POT" class="tech-icon">
+          <img src="./assets/images/pot.svg" alt="POT" title="POT" class="tech-icon">
           <img src="./assets/images/scikit-learn.svg" alt="scikit-learn" title="scikit-learn" class="tech-icon">
           <img src="./assets/images/numpy.svg" alt="NumPy" title="NumPy" class="tech-icon">
         </span>
@@ -234,6 +234,20 @@ const projectData = {
       The model achieved an average accuracy of <strong>87%</strong> across cross-validation folds.
       I am continuing to refine the model to improve accuracy and additional performance metrics.
     </p>
+    <h2>Technologies</h2>
+      <div class="project-details-tech">
+        <span class="tech-icons">
+          <img src="./assets/images/python.svg" alt="Python" title="Python" class="tech-icon">
+          <img src="./assets/images/tensorflow.svg" alt="TensorFlow" title="TensorFlow" class="tech-icon">
+          <img src="./assets/images/scikit-learn.svg" alt="scikit-learn" title="scikit-learn" class="tech-icon">
+          <img src="./assets/images/numpy.svg" alt="NumPy" title="NumPy" class="tech-icon">
+        </span>
+      </div>
+    <div class="project-details-github">
+      <a href="https://github.com/MeriemAfafHaddou/breast-cancer-classification" target="_blank" class="github-btn">
+        <ion-icon name="logo-github"></ion-icon> View on GitHub
+      </a>
+    </div>
   `
   },
 
@@ -272,23 +286,28 @@ const projectData = {
       ensured that maintenance operations could be handled efficiently and reliably.
     </p>
 
-    <h2>Skills</h2>
-    <ul class="project-details-skills">
-      <li>Flutter</li>
-      <li>State Management (Flutter Provider)</li>
-      <li>REST APIs</li>
-      <li>Automated Notifications (FCM)</li>
-      <li>Teamwork</li>
-    </ul>
+    <h2>Technologies</h2>
+      <div class="project-details-tech">
+        <span class="tech-icons">
+          <img src="./assets/images/flutter.svg" alt="Flutter" title="Flutter" class="tech-icon">
+          <img src="./assets/images/dart.svg" alt="Dart" title="Dart" class="tech-icon">
+          <img src="./assets/images/firebase.svg" alt="Firebase CLoud Messaging" title="Firebase CLoud Messaging" class="tech-icon">
+        </span>
+      </div>
+    <div class="project-details-github">
+      <a href="https://github.com/MeriemAfafHaddou/InnovIT_2CS_Project_Maintenance" target="_blank" class="github-btn">
+        <ion-icon name="logo-github"></ion-icon> View on GitHub
+      </a>
+    </div>
   `
   },
 
   'instant': {
-    title: 'Instant',
+    title: 'Instant - Food Delivery App',
     category: 'Mobile Dev',
     content: `
     <div class="project-details-header">
-      <h1>Instant</h1>
+      <h1>Instant - Food Delivery App</h1>
       <span class="project-details-category"><strong>Category:</strong> Mobile Dev</span>
     </div>
 
@@ -317,6 +336,21 @@ const projectData = {
       notification features to keep users updated on their orders. This project strengthened my skills
       in teamwork, cross-platform collaboration, and full-stack mobile development.
     </p>
+    <h2>Technologies</h2>
+      <div class="project-details-tech">
+        <span class="tech-icons">
+          <img src="./assets/images/kotlin.svg" alt="Kotlin" title="Kotlin" class="tech-icon">
+          <img src="./assets/images/express-js.svg" alt="Express JS" title="Express JS" class="tech-icon">
+          <img src="./assets/images/firebase.svg" alt="Firebase CLoud Messaging" title="Firebase CLoud Messaging" class="tech-icon">
+          <img src="./assets/images/prisma.svg" alt="Prisma" title="Prisma" class="tech-icon">
+          <img src="./assets/images/mysql.svg" alt="mySQL" title="mySQL" class="tech-icon">
+        </span>
+      </div>
+    <div class="project-details-github">
+      <a href="https://github.com/MeriemAfafHaddou/FoodDeliveryApp" target="_blank" class="github-btn">
+        <ion-icon name="logo-github"></ion-icon> View on GitHub
+      </a>
+    </div>
   `
   },
 
@@ -354,6 +388,18 @@ const projectData = {
       development of backend microservices, ensuring integration across the platform. This approach
       provided a reliable and efficient solution for urban mobility.
     </p>
+    <h2>Technologies</h2>
+      <div class="project-details-tech">
+        <span class="tech-icons">
+          <img src="./assets/images/flutter.svg" alt="flutter" title="flutter" class="tech-icon">
+        </span>
+      </div>
+    <div class="project-details-github">
+      <a href="https://github.com/MeriemAfafHaddou/BikeShare-frontend" target="_blank" class="github-btn">
+        <ion-icon name="logo-github"></ion-icon> View on GitHub
+      </a>
+    </div>
+
   `
   },
   'elbenna': {
@@ -387,15 +433,18 @@ const projectData = {
     </ul>
 
     <h2>Technologies</h2>
-    <ul class="project-details-skills">
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>jQuery</li>
-      <li>PHP</li>
-      <li>MVC Architecture</li>
-      <li>Ajax</li>
-    </ul>
+      <div class="project-details-tech">
+        <span class="tech-icons">
+          <img src="./assets/images/php.svg" alt="php" title="php" class="tech-icon">
+          <img src="./assets/images/javascript.svg" alt="js" title="js" class="tech-icon">
+          <img src="./assets/images/jquery.svg" alt="jquery" title="jquery" class="tech-icon">
+        </span>
+      </div>
+    <div class="project-details-github">
+      <a href="https://github.com/MeriemAfafHaddou/Projet_TDW" target="_blank" class="github-btn">
+        <ion-icon name="logo-github"></ion-icon> View on GitHub
+      </a>
+    </div>
   `
   },
   'smartmailbox': {
@@ -429,18 +478,22 @@ const projectData = {
       <li>Arduino</li>
       <li>GSM Module</li>
       <li>RFID</li>
-      <li>Distance Sensor</li>
-      <li>IoT</li>
+      <li>Ultrasonic Distance Sensor</li>
     </ul>
+    <div class="project-details-github">
+      <a href="./assets/files/smart_mailbox.pdf" target="_blank" class="github-btn">
+        <ion-icon name="document-text-outline"></ion-icon> View Technical Report (french)
+      </a>
+    </div>
   `
   },
   'ivr': {
     title: 'Interactive Voice Response',
-    category: 'Others',
+    category: 'Software Systems',
     content: `
     <div class="project-details-header">
       <h1>Interactive Voice Response</h1>
-      <span class="project-details-category"><strong>Category:</strong> Others</span>
+      <span class="project-details-category"><strong>Category: </strong>Software Systems</span>
     </div>
 
     <h2>Overview</h2>
@@ -473,12 +526,12 @@ const projectData = {
     </p>
 
     <h2>Technologies</h2>
-    <ul class="project-details-skills">
-      <li>Python</li>
-      <li>Tornado (request handling)</li>
-      <li>Telnyx (telephony integration)</li>
-      <li>Caching mechanisms</li>
-    </ul>
+      <div class="project-details-tech">
+        <span class="tech-icons">
+          <img src="./assets/images/python.svg" alt="Python" title="Python" class="tech-icon">
+          <img src="./assets/images/telnyx.svg" alt="Telnyx" title="Telnyx" class="tech-icon">
+        </span>
+      </div>
   `
   },
 
