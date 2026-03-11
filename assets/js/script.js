@@ -204,45 +204,61 @@ class PortfolioApp {
     return {
       'relio': {
         title: 'Relio',
-        category: 'Machine Learning',
+        category: 'Research',
         content: `
           <div class="project-details-header">
             <h1>Relio</h1>
-            <span class="project-details-category"><strong>Category:</strong> Machine Learning</span>
+            <span class="project-details-category"><strong>Category:</strong> Machine Learning Research</span>
           </div>
 
           <h2>Overview</h2>
           <p>
-            As part of my final year project, I developed <strong>Relio</strong>, a Python package designed to address
-            one of the key challenges in online machine learning: <em>concept drift detection</em>.
-            Concept drift occurs when the statistical properties of incoming data change over time,
-            which can lead to significant performance drops in deployed models.
+            <strong>Relio</strong> is a research project developed during my final year of study. 
+            The goal of this work was to study the problem of <em>concept drift</em> in machine learning systems.
+            In many real-world applications, data distributions change over time, which can lead to a significant 
+            drop in model performance if these changes are not detected early.
           </p>
 
-          <h2>How Relio Works</h2>
           <p>
-            Relio provides a proactive solution by continuously monitoring data distributions and detecting shifts
-            <strong>before model accuracy deteriorates</strong>.
-            At its core, Relio leverages <strong>Optimal Transport theory</strong>, a mathematical framework that
-            quantifies the cost of transforming one probability distribution into another.
-            This enables a robust and precise comparison of data streams, making drift detection both reliable and
-            efficient.
+            In this project, I explored how <strong>Optimal Transport</strong> can be used to measure changes between 
+            data distributions and detect drift in streaming data. The objective was to design a method that can 
+            identify distribution shifts early, before they start degrading model accuracy.
           </p>
 
-          <h2>Validation</h2>
+          <h2>Research Approach</h2>
           <p>
-            To validate Relio, we tested it on both <strong>supervised (SGDClassifier)</strong> and
-            <strong>unsupervised (K-means)</strong> models.
-            While these experiments included retraining the models after each detected drift, this step was only for
-            testing purposes to observe the effects of drift on model performance—it was not part of Relio's objectives or
-            design.
+            The work started with a review of existing concept drift detection methods and their limitations. 
+            Based on this analysis, I implemented an approach that compares consecutive data distributions using 
+            Optimal Transport distances. The system monitors these distances and raises an alert when the shift 
+            exceeds a defined threshold.
+          </p>
+
+          <h2>Experimental Evaluation</h2>
+          <p>
+            To evaluate the approach, I conducted experiments on both <strong>synthetic</strong> and 
+            <strong>real-world datasets</strong>. The experiments explored how different parameters influence 
+            drift detection, including:
+          </p>
+
+          <ul class="project-details-features">
+            <li>Different cost functions used in Optimal Transport</li>
+            <li>Different threshold values for drift detection</li>
+            <li>Various types of drift scenarios (gradual, sudden, incremental, and recurrent)</li>
+          </ul>
+
+          <p>
+            The method was tested with both <strong>supervised models (SGDClassifier)</strong> and 
+            <strong>unsupervised models (K-means)</strong> in order to observe how drift affects different 
+            learning settings.
           </p>
 
           <h2>My Contributions</h2>
           <ul class="project-details-features">
-            <li>Developed Relio as a Python package for seamless ML workflow integration</li>
-            <li>Implemented drift detection using <strong>Optimal Transport</strong> techniques</li>
-            <li>Validated through experiments on supervised and unsupervised learning models</li>
+            <li>Studied existing literature on concept drift detection</li>
+            <li>Designed and implemented the RELIO drift detection approach</li>
+            <li>Conducted experiments across multiple datasets and drift scenarios</li>
+            <li>Analyzed the impact of cost functions and detection thresholds</li>
+            <li>Co-authored a draft research paper describing the methodology and results</li>
           </ul>
 
           <h2>Technologies</h2>
@@ -258,6 +274,9 @@ class PortfolioApp {
           <div class="project-details-github">
             <a href="https://github.com/MeriemAfafHaddou/RELIO" target="_blank" class="github-btn">
               <ion-icon name="logo-github"></ion-icon> View on GitHub
+            </a>
+            <a href="./assets/files/concept_drift_detection_using_OT.pdf" target="_blank" class="github-btn">
+              <ion-icon name="document-text-outline"></ion-icon> View Draft Research Paper
             </a>
           </div>
         `
