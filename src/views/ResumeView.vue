@@ -37,7 +37,7 @@
                     <span class="timeline-location badge">{{ item.location }}</span>
                   </div>
                 </div>
-                <span class="timeline-duration badge badge-blue">{{ item.duration }}</span>
+                <span class="timeline-duration badge badge-beige">{{ item.duration }}</span>
               </div>
               <p class="timeline-desc">{{ item.description }}</p>
               <ul class="timeline-achievements">
@@ -75,7 +75,7 @@
                   <h3 class="timeline-role">{{ item.degree }}</h3>
                   <span class="timeline-company">{{ item.institution }}</span>
                 </div>
-                <span class="timeline-duration badge badge-blue">{{ item.duration }}</span>
+                <span class="timeline-duration badge badge-beige">{{ item.duration }}</span>
               </div>
               <div class="edu-coursework">
                 <p class="coursework-label">Relevant coursework</p>

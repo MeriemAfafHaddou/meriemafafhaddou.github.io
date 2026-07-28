@@ -20,7 +20,7 @@
           <span
             v-for="cat in project.category"
             :key="cat"
-            class="badge badge-blue"
+            class="badge badge-beige"
           >
             {{ cat }}
           </span>

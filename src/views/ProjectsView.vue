@@ -155,14 +155,14 @@ const filteredProjects = computed(() =>
 }
 
 .filter-btn:hover {
-  border-color: var(--blue-500);
-  color: var(--blue-500);
+  border-color: var(--beige-500);
+  color: var(--beige-500);
 }
 
 .filter-btn.active {
-  background: var(--blue-500);
+  background: var(--beige-500);
   color: white;
-  border-color: var(--blue-500);
+  border-color: var(--beige-500);
 }
 
 .dark .filter-btn {
@@ -176,7 +176,7 @@ const filteredProjects = computed(() =>
 }
 
 .dark .filter-btn.active {
-  background: var(--blue-500);
+  background: var(--beige-500);
   color: white;
 }
 
@@ -209,7 +209,7 @@ const filteredProjects = computed(() =>
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: var(--blue-500);
+  border-color: var(--beige-500);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -236,7 +236,7 @@ const filteredProjects = computed(() =>
 
 .project-icon .material-symbols-outlined {
   font-size: 32px;
-  color: var(--blue-500);
+  color: var(--beige-500);
 }
 
 /* TITLE BIGGER */
@@ -266,7 +266,7 @@ const filteredProjects = computed(() =>
   padding: 4px 8px;
   border-radius: 999px;
   background: rgba(59, 130, 246, 0.08);
-  color: var(--blue-500);
+  color: var(--beige-500);
 }
 
 /* TECH STACK (FULL, WRAPPED) */
@@ -330,7 +330,7 @@ const filteredProjects = computed(() =>
 }
 
 .project-link-hint {
-  color: var(--blue-500);
+  color: var(--beige-500);
   font-weight: 500;
   font-size: 13px;
 }

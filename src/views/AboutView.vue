@@ -47,7 +47,7 @@
           <h2 class="info-card-title">Contact & Info</h2>
           <ul class="info-list">
             <li class="info-item">
-              <span class="info-icon info-icon--blue">
+              <span class="info-icon info-icon--beige">
                 <span class="material-symbols-outlined">mail</span>
               </span>
               <div class="info-content">
@@ -59,7 +59,7 @@
             </li>
 
             <li class="info-item">
-              <span class="info-icon info-icon--blue">
+              <span class="info-icon info-icon--beige">
                 <span class="material-symbols-outlined">location_on</span>
               </span>
               <div class="info-content">
@@ -71,7 +71,7 @@
             </li>
 
             <li class="info-item">
-              <span class="info-icon info-icon--blue">
+              <span class="info-icon info-icon--beige">
                 <span class="material-symbols-outlined">work</span>
               </span>
               <div class="info-content">
@@ -83,7 +83,7 @@
             </li>
 
             <li class="info-item">
-              <span class="info-icon info-icon--blue">
+              <span class="info-icon info-icon--beige">
                 <span class="material-symbols-outlined">code</span>
               </span>
               <div class="info-content">
@@ -95,7 +95,7 @@
             </li>
 
             <li class="info-item info-item--langs">
-              <span class="info-icon info-icon--blue">
+              <span class="info-icon info-icon--beige">
                 <span class="material-symbols-outlined">public</span>
               </span>
               <div class="info-content">
@@ -323,14 +323,14 @@ import { profile, skills } from '@/data/data.js'
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.info-icon--blue {
+.info-icon--beige {
   background: rgba(59, 130, 246, 0.06);
-  color: #2563eb;
+  color: #8F7664;
 
   border: 1px solid rgba(59, 130, 246, 0.12);
 }
 
-.dark .info-icon--blue {
+.dark .info-icon--beige {
   background: rgba(59, 130, 246, 0.15);
   color: #60A5FA;
 }

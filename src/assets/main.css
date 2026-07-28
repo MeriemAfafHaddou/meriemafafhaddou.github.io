@@ -1,10 +1,10 @@
 /* ─── Design Tokens ─── */
 :root {
-  --blue-500: #2563EB;
-  --blue-400: #3B82F6;
-  --blue-600: #1D4ED8;
-  --blue-50:  #EFF6FF;
-  --blue-100: #DBEAFE;
+  --beige-600: #8F7664;
+  --beige-500: #A98E79;
+  --beige-400: #BFA28C;
+  --beige-100: #F3ECE6;
+  --beige-50:  #FBF8F5;
 
   /* Light mode */
   --bg:           #F8FAFC;
@@ -16,9 +16,9 @@
   --text:         #0F172A;
   --text-muted:   #3e4650;
   --text-subtle:  #94A3B8;
-  --accent:       var(--blue-500);
-  --accent-hover: var(--blue-600);
-  --accent-bg:    var(--blue-50);
+  --accent:       var(--beige-500);
+  --accent-hover: var(--beige-600);
+  --accent-bg:    var(--beige-50);
   --card-bg:      #FFFFFF;
   --card-shadow:  0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
   --card-shadow-hover: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.05);
@@ -47,8 +47,8 @@
   --text:         #F1F5F9;
   --text-muted:   #94A3B8;
   --text-subtle:  #484f59;
-  --accent:       var(--blue-400);
-  --accent-hover: var(--blue-500);
+  --accent:       var(--beige-400);
+  --accent-hover: var(--beige-500);
   --accent-bg:    rgba(59, 130, 246, 0.1);
   --card-bg:      #111827;
   --card-shadow:  0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
@@ -222,7 +222,7 @@ a:hover { opacity: 0.8; }
   text-transform: capitalize;
 }
 
-.badge-blue {
+.badge-beige {
   background: var(--accent-bg);
   color: var(--accent);
   border-color: rgba(59,130,246,0.2);
@@ -292,7 +292,7 @@ a:hover { opacity: 0.8; }
 
   text-transform: uppercase;
 
-  background: var(--blue-500);
+  background: var(--beige-500);
   color: white;
 
   box-shadow: 0 6px 18px rgba(59, 130, 246, 0.25);
@@ -323,11 +323,11 @@ a:hover { opacity: 0.8; }
 
 /* ─── Selection ─── */
 ::selection {
-  background: var(--blue-100);
-  color: var(--blue-600);
+  background: var(--beige-100);
+  color: var(--beige-600);
 }
 
 .dark ::selection {
   background: rgba(59,130,246,0.25);
-  color: var(--blue-400);
+  color: var(--beige-400);
 }
