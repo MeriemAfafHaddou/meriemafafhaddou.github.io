@@ -171,7 +171,7 @@ const filteredProjects = computed(() =>
 }
 
 .dark .filter-btn:hover {
-  background: rgba(59, 130, 246, 0.08);
+  background: rgba(191, 162, 140, 0.08);
   color: white;
 }
 
@@ -230,8 +230,8 @@ const filteredProjects = computed(() =>
 
   border-radius: 14px;
 
-  background: rgba(59, 130, 246, 0.08);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: rgba(191, 162, 140, 0.08);
+  border: 1px solid rgba(191, 162, 140, 0.2);
 }
 
 .project-icon .material-symbols-outlined {
@@ -265,7 +265,7 @@ const filteredProjects = computed(() =>
   font-size: 11px;
   padding: 4px 8px;
   border-radius: 999px;
-  background: rgba(59, 130, 246, 0.08);
+  background: rgba(191, 162, 140, 0.08);
   color: var(--beige-500);
 }
 
@@ -318,7 +318,7 @@ const filteredProjects = computed(() =>
 
   background: var(--accent-bg);
   color: var(--accent);
-  border-color: rgba(59,130,246,0.2);
+  border-color: rgba(191, 162, 140, 0.2);
 }
 /* FOOTER */
 .project-footer {

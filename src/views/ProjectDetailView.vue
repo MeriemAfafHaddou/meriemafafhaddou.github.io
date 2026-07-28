@@ -515,6 +515,10 @@ watch(project, () => {
   transition: all 0.2s ease;
 }
 
+.dark .icon-btn {
+  color: var(--beige-300)
+}
+
 .icon-btn:hover {
   background: var(--bg-subtle);
   transform: scale(1.05);

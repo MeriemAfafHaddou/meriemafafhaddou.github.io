@@ -324,15 +324,15 @@ import { profile, skills } from '@/data/data.js'
 }
 
 .info-icon--beige {
-  background: rgba(59, 130, 246, 0.06);
-  color: #8F7664;
-
-  border: 1px solid rgba(59, 130, 246, 0.12);
+  background: rgba(191, 162, 140, 0.10);
+  color: var(--accent);
+  border: 1px solid rgba(191, 162, 140, 0.20);
 }
 
 .dark .info-icon--beige {
-  background: rgba(59, 130, 246, 0.15);
-  color: #60A5FA;
+  background: rgba(191, 162, 140, 0.14);
+  color: var(--accent);
+  border-color: rgba(191, 162, 140, 0.22);
 }
 
 /* Label + value stack */
@@ -370,13 +370,12 @@ import { profile, skills } from '@/data/data.js'
 }
 
 .info-value--text {
-  color: #334155;
-  /* intentionally darker than --text-muted in light mode */
+  color: var(--text-muted);
   font-weight: 500;
 }
 
 .dark .info-value--text {
-  color: #CBD5E1;
+  color: var(--text-muted);
 }
 
 /* Language tags */
@@ -398,17 +397,17 @@ import { profile, skills } from '@/data/data.js'
   font-weight: 500;
   letter-spacing: 0.2px;
 
-  background: rgba(59, 130, 246, 0.06);
-
-  border: 1px solid rgba(59, 130, 246, 0.12);
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid rgba(191, 162, 140, .22);
 
   transition: all 0.2s ease;
 }
 
 .dark .lang-badge {
-  background: rgba(96, 165, 250, 0.12);
-  color: #93c5fd;
-  border-color: rgba(96, 165, 250, 0.18);
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-color: rgba(191,162,140,.25);
 }
 
 /* ── Bio ─────────────────────────────────────── */
@@ -420,13 +419,13 @@ import { profile, skills } from '@/data/data.js'
 
 .bio-para {
   font-size: 16px;
-  color: #475569;
+  color: var(--text-muted);
   /* richer than --text-muted, readable in light */
   line-height: 1.8;
 }
 
 .dark .bio-para {
-  color: #94A3B8;
+  color: var(--text-muted);
 }
 
 /* ── Skills ──────────────────────────────────── */
@@ -441,8 +440,8 @@ import { profile, skills } from '@/data/data.js'
 
   border-radius: 14px;
 
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: color-mix(in srgb, var(--card-bg) 90%, transparent);
+  border: 1px solid var(--border);
 
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -456,8 +455,8 @@ import { profile, skills } from '@/data/data.js'
 }
 
 .dark .skill-group {
-  background: rgba(15, 23, 42, 0.35);
-  border: 1px solid rgba(148, 163, 184, 0.08);
+  background: color-mix(in srgb, var(--card-bg) 85%, transparent);
+  border: 1px solid var(--border);
 }
 
 .skill-group-title {
@@ -466,17 +465,15 @@ import { profile, skills } from '@/data/data.js'
   text-transform: uppercase;
   letter-spacing: 0.12em;
 
-  color: #64748b;
+  color: var(--text-subtle);
+  border-bottom: 1px solid var(--border);
 
   margin-bottom: 12px;
   padding-bottom: 10px;
-
-  border-bottom: 1px solid rgba(100, 116, 139, 0.15);
 }
 
 .dark .skill-group-title {
-  color: rgba(148, 163, 184, 0.8);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  color: var(--text-subtle);
 }
 
 .skill-chips {
@@ -495,24 +492,21 @@ import { profile, skills } from '@/data/data.js'
   font-size: 12px;
   font-weight: 500;
 
-  color: #334155;
-  background: rgba(15, 23, 42, 0.04);
-
-  border: 1px solid rgba(15, 23, 42, 0.06);
+  color: var(--text-muted);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
 
   transition: all 0.2s ease;
 }
 
 .dark .tech-chip {
-  color: #cbd5e1;
-  background: rgba(148, 163, 184, 0.08);
-  border: 1px solid rgba(148, 163, 184, 0.12);
+  color: var(--text-muted);
 }
 
 .tech-chip:hover {
-  transform: translateY(-1px);
-  background: rgba(59, 130, 246, 0.08);
-  border-color: rgba(59, 130, 246, 0.2);
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-color: rgba(191,162,140,.28);
 }
 
 /* ── Responsive ──────────────────────────────── */
