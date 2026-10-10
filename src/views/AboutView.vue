@@ -30,9 +30,9 @@
               <span class="material-symbols-outlined">mail</span>
               Get in touch
             </a>
-            <a :href="profile.resumeUrl" class="btn btn-secondary">
-              <span class="material-symbols-outlined">download</span>
-              Download Resume
+            <a :href="profile.resumeUrl" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined">visibility</span>
+              View Resume
             </a>
           </div>
         </div>

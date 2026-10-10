@@ -1,11 +1,12 @@
 export const profile = {
   name: 'Meriem Afaf Haddou',
-  title: 'Software Engineer',
-  tagline: 'Specializing in Python, Backend Systems, and Distributed Applications',
+  title: 'Computer Science Engineer',
+  tagline: 'Software Engineering, Machine Learning, and Reliable AI',
   bio: [
-    "I’m a software engineer with experience across backend systems, mobile development, and data-driven applications. I’ve worked on academic and professional projects involving real-time systems, mobile apps, and distributed architectures, focusing on building reliable and well-structured software solutions.",
-    "I’m particularly interested in backend and system-oriented development, including real-time processing, APIs, and event-driven architectures. I’ve worked with Python, Kotlin, Flutter, and JavaScript backends, integrating external services and building applications with attention to performance, maintainability, and clean design.",
-    "I value clear problem understanding and structured engineering approaches. I focus on delivering practical solutions across mobile, backend, and data-related systems. I’m currently looking for opportunities in software engineering or freelance work where I can contribute to real-world projects and continue improving my skills."
+    "I'm Meriem, a computer science engineer with experience in software development and machine learning research.",
+    "I've worked on different kinds of software projects, from backend systems to data-driven applications. For my Master's thesis, I worked on concept drift detection using Optimal Transport. I spent a lot of time trying to understand my results, especially when I wasn't sure how to interpret them. Sometimes, I had to go back, investigate further, and discuss things with my supervisors before I could make sense of what I was seeing. Sometimes, answering one question led to several others.",
+    "That curiosity is one of the reasons I've continued exploring machine learning. Lately, I've been particularly interested in explainable and reliable AI, especially in medical applications. I find myself asking how we can understand a model's predictions, recognize when it gets things wrong, and know what to make of its results. I'm still learning and figuring out which questions I want to spend more time on, and I'm okay with not having that all mapped out yet.",
+    "I also enjoy software development. I've worked on different kinds of projects, and I like the process of figuring things out as I go. Sometimes, things don't work as expected, and I have to try a different approach or go back to understand what's wrong."
   ],
   contact: {
     email: 'afafmeriem.haddou@gmail.com',
@@ -23,8 +24,16 @@ export const skills = [
     items: ['Python', 'Django', 'FastAPI', 'Tornado', 'REST APIs', 'Multi-tenant SaaS']
   },
   {
-    category: 'Async & Data',
-    items: ['asyncio', 'batch processing', 'Pandas', 'NumPy']
+    category: 'Machine Learning',
+    items: ['PyTorch', 'TensorFlow', 'Keras', 'Scikit-learn', 'Transfer Learning', 'ResNet']
+  },
+  {
+    category: 'Explainable & Reliable AI',
+    items: ['Grad-CAM', 'Monte Carlo Dropout', 'Model Calibration', 'Uncertainty Estimation']
+  },
+  {
+    category: 'Data Processing',
+    items: ['asyncio', 'Batch Processing', 'Pandas', 'NumPy']
   },
   {
     category: 'Databases',
@@ -40,7 +49,7 @@ export const skills = [
   },
   {
     category: 'Frontend',
-    items: ['JavaScript', 'Vue.js', 'Pinia', 'E2E testing']
+    items: ['JavaScript', 'Vue.js', 'Pinia', 'E2E Testing']
   }
 ]
 
@@ -132,6 +141,83 @@ export const education = [
 ]
 
 export const projects = [
+  {
+    id: 'brain-ct-ich-detection',
+    slug: 'brain-ct-ich-detection',
+    name: 'Brain CT Hemorrhage Detection and Explainability',
+    context: { type: 'personal' },
+    category: ['machine learning', 'explainable AI'],
+    icon: 'biotech',
+
+    shortDescription:
+      'Exploring intracranial hemorrhage detection in brain CT images, with a focus on model explainability, uncertainty, and reliability.',
+
+    thumbnail: null,
+
+    techs: [
+      'Python',
+      'PyTorch',
+      'Scikit-learn',
+      'NumPy',
+      'Matplotlib',
+      'ResNet-18',
+      'Grad-CAM',
+      'MC Dropout'
+    ],
+
+    featured: true,
+
+    overview:
+      'Developed an experimental deep learning pipeline for detecting intracranial hemorrhage (ICH) in brain CT images. Beyond classification performance, the project investigates model explanations, prediction uncertainty, and calibration to better understand when the model makes mistakes and how much its predictions can be trusted.',
+
+    problem:
+      'Detecting intracranial hemorrhage in CT images is a challenging medical imaging task. A model may achieve reasonable overall performance while missing positive cases or producing overconfident predictions. The goal is to investigate these limitations rather than evaluate the model using accuracy alone.',
+
+    architecture:
+      'The initial classification pipeline uses a ResNet-18 model pretrained on ImageNet. The project also explores multi-window CT inputs to represent different tissue characteristics, alongside segmentation-guided learning using available hemorrhage masks. Model behavior is examined using Grad-CAM, Monte Carlo Dropout, and calibration metrics.',
+
+    technicalDecisions: [
+      'Used patient-level development and test splits to reduce data leakage between CT slices from the same patient',
+      'Started with a ResNet-18 backbone pretrained on ImageNet',
+      'Explored multi-window CT inputs to capture complementary image information',
+      'Investigated segmentation-guided learning using available hemorrhage masks',
+      'Evaluated performance using sensitivity, specificity, F1 score, and AUROC rather than accuracy alone',
+      'Used Grad-CAM to inspect image regions influencing predictions',
+      'Explored Monte Carlo Dropout and calibration metrics to investigate prediction uncertainty and confidence'
+    ],
+
+    features: [
+      'Binary intracranial hemorrhage classification from brain CT images',
+      'Patient-level dataset splitting',
+      'Multi-window CT input exploration',
+      'Segmentation-guided learning experiments',
+      'Grad-CAM visualizations',
+      'Uncertainty estimation using Monte Carlo Dropout',
+      'Calibration and error analysis'
+    ],
+
+    challenges: [
+      'Worked with a small dataset containing 82 patients, requiring careful separation of development and test data.',
+      'Investigated limited sensitivity and missed hemorrhage cases despite reasonable overall classification performance.',
+      'Found that some Grad-CAM explanations highlighted regions outside the brain, raising questions about what the model had learned.',
+      'Examined overconfident predictions and calibration to understand limitations beyond classification metrics.'
+    ],
+
+    impact: [
+      'The initial multi-window classification baseline achieved an AUROC of approximately 0.84 and sensitivity of approximately 0.61 on the test set.',
+      'Error analysis identified missed hemorrhage cases and overconfident false-positive predictions.',
+      'The findings highlighted the need to improve sensitivity and investigate model explanations and uncertainty before drawing conclusions about reliability.'
+    ],
+
+    note:
+      'This is an ongoing personal project exploring explainability and reliability in medical AI. The reported metrics refer to the initial multi-window baseline, not a final improved model. Experiments involving segmentation-guided learning and other changes are exploratory, and their effectiveness requires separate evaluation.',
+
+    links: {
+      source: null,
+      demo: null,
+      docs: null
+    }
+  },
   {
     id: 'dentix',
     slug: 'dentix',
@@ -555,7 +641,7 @@ export const projects = [
 
     context: {
       type: 'academic',
-   },
+    },
 
     note:
       'This project was developed as part of an academic group project. My contribution focused on the Android mobile application development using Kotlin, including UI implementation, API integration, and real-time delivery tracking via Firebase Cloud Messaging.',
