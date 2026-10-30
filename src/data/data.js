@@ -1,12 +1,12 @@
 export const profile = {
   name: 'Meriem Afaf Haddou',
   title: 'Computer Science Engineer',
-  tagline: 'Software Engineering, Machine Learning, and Reliable AI',
+  tagline: 'Software Engineering, Machine Learning, and Model Reliability',
   bio: [
     "I'm Meriem, a computer science engineer with experience in software development and machine learning research.",
-    "I've worked on different kinds of software projects, from backend systems to data-driven applications. For my Master's thesis, I worked on concept drift detection using Optimal Transport. I spent a lot of time trying to understand my results, especially when I wasn't sure how to interpret them. Sometimes, I had to go back, investigate further, and discuss things with my supervisors before I could make sense of what I was seeing. Sometimes, answering one question led to several others.",
-    "That curiosity is one of the reasons I've continued exploring machine learning. Lately, I've been particularly interested in explainable and reliable AI, especially in medical applications. I find myself asking how we can understand a model's predictions, recognize when it gets things wrong, and know what to make of its results. I'm still learning and figuring out which questions I want to spend more time on, and I'm okay with not having that all mapped out yet.",
-    "I also enjoy software development. I've worked on different kinds of projects, and I like the process of figuring things out as I go. Sometimes, things don't work as expected, and I have to try a different approach or go back to understand what's wrong."
+    "I've worked on different kinds of software projects, from backend systems to data-driven applications. For my Master's thesis, I investigated concept drift detection using Optimal Transport. Beyond developing the approach, I examined its behavior across synthetic and real datasets, explored what the transport costs could reveal about different types of drift, and evaluated how these findings related to downstream model performance. This deeper investigation became an important part of my research.",
+    "My research interests include understanding how machine learning models behave, how reliable their predictions are, and what we can learn from their limitations. I'm particularly interested in uncertainty estimation, explainability, and model behavior under changing conditions. I'm still exploring these areas and discovering which questions I want to pursue further.",
+    "I also enjoy software development. I've worked across different parts of the stack, from data processing and backend services to full-stack applications. I like turning ideas into working systems and finding practical ways to solve engineering problems."
   ],
   contact: {
     email: 'afafmeriem.haddou@gmail.com',
@@ -144,13 +144,13 @@ export const projects = [
   {
     id: 'brain-ct-ich-detection',
     slug: 'brain-ct-ich-detection',
-    name: 'Brain CT Hemorrhage Detection and Explainability',
+    name: 'Exploring Model Reliability in Brain CT Imaging',
     context: { type: 'personal' },
-    category: ['machine learning', 'explainable AI'],
+    category: ['machine learning', 'explainable AI', 'model reliability'],
     icon: 'biotech',
 
     shortDescription:
-      'Exploring intracranial hemorrhage detection in brain CT images, with a focus on model explainability, uncertainty, and reliability.',
+      'Investigating brain CT hemorrhage detection beyond predictive performance, through model calibration, uncertainty estimation, explainability, and segmentation-guided learning.',
 
     thumbnail: null,
 
@@ -168,54 +168,57 @@ export const projects = [
     featured: true,
 
     overview:
-      'Developed an experimental deep learning pipeline for detecting intracranial hemorrhage (ICH) in brain CT images. Beyond classification performance, the project investigates model explanations, prediction uncertainty, and calibration to better understand when the model makes mistakes and how much its predictions can be trusted.',
+      'An experimental study of intracranial hemorrhage (ICH) detection in brain CT images, focusing on how to evaluate model behavior beyond classification metrics. The project examines prediction errors, confidence calibration, uncertainty estimates, and visual explanations. It also explores whether multi-window CT inputs and segmentation-guided learning can improve hemorrhage detection.',
 
     problem:
-      'Detecting intracranial hemorrhage in CT images is a challenging medical imaging task. A model may achieve reasonable overall performance while missing positive cases or producing overconfident predictions. The goal is to investigate these limitations rather than evaluate the model using accuracy alone.',
+      'A model can achieve reasonable classification performance while still missing hemorrhage cases or assigning high confidence to incorrect predictions. This project investigates these issues and asks a broader question: how much can we trust a model\'s predictions, and what can different evaluation methods reveal about its limitations?',
 
     architecture:
-      'The initial classification pipeline uses a ResNet-18 model pretrained on ImageNet. The project also explores multi-window CT inputs to represent different tissue characteristics, alongside segmentation-guided learning using available hemorrhage masks. Model behavior is examined using Grad-CAM, Monte Carlo Dropout, and calibration metrics.',
+      'The initial classification pipeline uses an ImageNet-pretrained ResNet-18 backbone. Subsequent experiments introduce brain and bone CT windows as separate input channels and add a segmentation head for joint classification and segmentation learning, using available hemorrhage masks. Model behavior is further examined through Grad-CAM, Monte Carlo Dropout, calibration metrics, and error analysis.',
 
     technicalDecisions: [
-      'Used patient-level development and test splits to reduce data leakage between CT slices from the same patient',
-      'Started with a ResNet-18 backbone pretrained on ImageNet',
-      'Explored multi-window CT inputs to capture complementary image information',
-      'Investigated segmentation-guided learning using available hemorrhage masks',
-      'Evaluated performance using sensitivity, specificity, F1 score, and AUROC rather than accuracy alone',
-      'Used Grad-CAM to inspect image regions influencing predictions',
-      'Explored Monte Carlo Dropout and calibration metrics to investigate prediction uncertainty and confidence'
+      'Used patient-level development and test splits to prevent slices from the same patient appearing across both sets',
+      'Established a ResNet-18 classification baseline',
+      'Evaluated sensitivity, specificity, F1 score, and AUROC alongside accuracy',
+      'Investigated missed hemorrhage cases through error analysis and Grad-CAM',
+      'Evaluated confidence calibration using Brier Score and Expected Calibration Error',
+      'Used Monte Carlo Dropout to investigate prediction uncertainty',
+      'Explored multi-window CT inputs and segmentation-guided learning as a subsequent experiment'
     ],
 
     features: [
-      'Binary intracranial hemorrhage classification from brain CT images',
-      'Patient-level dataset splitting',
-      'Multi-window CT input exploration',
-      'Segmentation-guided learning experiments',
+      'Binary intracranial hemorrhage classification',
+      'Patient-level data splitting and evaluation',
+      'Brain and bone CT window inputs',
+      'Joint classification and segmentation learning',
       'Grad-CAM visualizations',
-      'Uncertainty estimation using Monte Carlo Dropout',
-      'Calibration and error analysis'
+      'Monte Carlo Dropout uncertainty estimation',
+      'Confidence calibration and reliability analysis',
+      'Slice-level and patient-level error analysis'
     ],
 
     challenges: [
-      'Worked with a small dataset containing 82 patients, requiring careful separation of development and test data.',
-      'Investigated limited sensitivity and missed hemorrhage cases despite reasonable overall classification performance.',
-      'Found that some Grad-CAM explanations highlighted regions outside the brain, raising questions about what the model had learned.',
-      'Examined overconfident predictions and calibration to understand limitations beyond classification metrics.'
+      'Worked with a small dataset of 82 patients, making patient-level separation and careful interpretation of results particularly important.',
+      'The initial classifier showed limited sensitivity, with several hemorrhage cases going undetected despite reasonable overall performance.',
+      'Grad-CAM revealed cases where highlighted regions did not align well with visible hemorrhage findings.',
+      'Some incorrect predictions had very high confidence, revealing a gap between predictive performance and confidence reliability.',
+      'Segmentation-guided learning improved detection sensitivity, but did not resolve the model\'s overconfidence.'
     ],
 
     impact: [
-      'The initial multi-window classification baseline achieved an AUROC of approximately 0.84 and sensitivity of approximately 0.61 on the test set.',
-      'Error analysis identified missed hemorrhage cases and overconfident false-positive predictions.',
-      'The findings highlighted the need to improve sensitivity and investigate model explanations and uncertainty before drawing conclusions about reliability.'
+      'The initial classification model achieved 61.3% sensitivity, 86.6% specificity, and 84.4% AUROC on the test set.',
+      'Segmentation-guided learning increased sensitivity to 80.7% and AUROC to 90.0%, while specificity decreased slightly to 84.2%.',
+      'Despite improved detection, calibration analysis revealed substantial overconfidence. Predictions in the 0.8–1.0 confidence range had an average confidence of 95.5%, but an observed accuracy of only 43.2%.',
+      'The experiments highlighted that improving classification performance does not necessarily make model predictions more reliable.'
     ],
 
     note:
-      'This is an ongoing personal project exploring explainability and reliability in medical AI. The reported metrics refer to the initial multi-window baseline, not a final improved model. Experiments involving segmentation-guided learning and other changes are exploratory, and their effectiveness requires separate evaluation.',
+      'This project is an experimental investigation rather than a clinically validated system. The dataset contains 82 patients, and the results should be interpreted in that context. Segmentation annotations are available only for selected slices. The experiments do not establish clinical reliability or generalization to other hospitals and imaging conditions.',
 
     links: {
-      source: null,
+      source: 'https://github.com/MeriemAfafHaddou/reliable-brain-ct-ai',
       demo: null,
-      docs: null
+      docs: '/projects/brain_ct/exploratory_ct_ai.pdf'
     }
   },
   {
@@ -450,11 +453,11 @@ export const projects = [
     slug: 'breast-ultrasound-classification',
     name: 'Breast Ultrasound Image Classification',
     context: { type: 'personal' },
-    category: ['machine learning'],
+    category: ['machine learning', 'explainable AI'],
     icon: 'biotech',
 
     shortDescription:
-      'Deep learning model for classifying breast ultrasound images using transfer learning and explainable AI.',
+      'Three-class breast ultrasound classification using transfer learning, cross-validation, and Grad-CAM.',
 
     thumbnail: null,
 
@@ -465,52 +468,54 @@ export const projects = [
       'Scikit-learn',
       'NumPy',
       'Matplotlib',
+      'ResNet50',
       'Grad-CAM'
     ],
 
     featured: true,
 
     overview:
-      'Developed a deep learning pipeline to classify breast ultrasound images into Benign, Malignant, and Normal categories. The project focused on achieving reliable performance on a small and imbalanced medical imaging dataset while improving model interpretability through explainable AI techniques.',
+      'Developed a deep learning pipeline to classify breast ultrasound images into Benign, Malignant, and Normal categories. The project investigated transfer learning as an approach to image classification with a limited and imbalanced dataset, combining systematic evaluation with Grad-CAM visualizations to examine the regions influencing model predictions.',
 
     problem:
-      'Breast ultrasound datasets are typically limited in size and exhibit significant class imbalance, making it challenging to train robust deep learning models that generalize well. The objective was to build an accurate classifier while addressing these practical constraints.',
+      'Training deep learning models on small, imbalanced medical imaging datasets requires careful model selection and evaluation. The project explored how transfer learning and targeted fine-tuning could support three-class classification, while examining performance across different validation splits and an independent test set.',
 
     architecture:
-      'The model uses a ResNet50 backbone pretrained on ImageNet with transfer learning. Only the final layers were fine-tuned, followed by a custom classification head composed of Global Average Pooling, a 512-unit dense layer, Batch Normalization, ReLU activation, Dropout, and a three-class Softmax output. Training was performed using Adam optimization and Sparse Categorical Crossentropy loss.',
+      'The model uses a ResNet50 backbone pretrained on ImageNet. The final layers were fine-tuned, followed by a custom classification head consisting of Global Average Pooling, a 512-unit dense layer, Batch Normalization, ReLU activation, Dropout, and a three-class Softmax output. Training used the Adam optimizer and Sparse Categorical Crossentropy loss.',
 
     technicalDecisions: [
-      'Transfer learning using a pretrained ResNet50 backbone',
-      'Fine-tuned only the final layers to reduce overfitting',
-      'Applied data augmentation exclusively to the training set',
-      'Performed 5-fold stratified cross-validation for reliable evaluation',
-      'Used multiple evaluation metrics beyond accuracy, including Precision, Recall, F1 Score, and Balanced Accuracy',
-      'Integrated Grad-CAM for model explainability and prediction visualization'
+      'Applied transfer learning using an ImageNet-pretrained ResNet50 backbone',
+      'Fine-tuned the final layers while keeping the earlier feature extraction layers frozen',
+      'Applied data augmentation exclusively to the training data',
+      'Used 5-fold stratified cross-validation to evaluate performance across different data splits',
+      'Evaluated the model using Precision, Recall, F1 Score, and Balanced Accuracy alongside standard accuracy',
+      'Integrated Grad-CAM to visualize image regions influencing model predictions',
+      'Evaluated the final model on an independent test set'
     ],
 
     features: [
       'Three-class breast ultrasound image classification',
       'Transfer learning with ResNet50',
       '5-fold stratified cross-validation',
-      'Automatic performance evaluation across multiple metrics',
-      'Grad-CAM heatmap generation for explainable AI',
-      'Final model evaluation on an independent test set'
+      'Evaluation using multiple classification metrics',
+      'Grad-CAM heatmap generation',
+      'Independent test set evaluation'
     ],
 
     challenges: [
-      'Addressed severe class imbalance while preserving unbiased validation and test sets.',
-      'Improved generalization on a limited dataset through transfer learning and targeted fine-tuning.',
-      'Balanced predictive performance with model interpretability using Grad-CAM visualizations.'
+      'Designed the evaluation strategy around a limited dataset with substantial class imbalance.',
+      'Investigated how transfer learning and fine-tuning affected generalization across validation folds.',
+      'Examined model predictions using Grad-CAM to gain visual insight into the image regions influencing classification.'
     ],
 
     impact: [
-      'Achieved 88.9% test accuracy and 84.2% balanced accuracy.',
-      'Obtained stable validation performance across five stratified folds (average validation accuracy: 81%).',
-      'Demonstrated that explainability techniques can improve confidence in deep learning predictions for medical imaging.'
+      'Achieved 88.9% accuracy and 84.2% balanced accuracy on the independent test set.',
+      'Obtained an average validation accuracy of 81% across five stratified folds.',
+      'Combined quantitative evaluation with Grad-CAM visualizations to examine both classification performance and model behavior.'
     ],
 
     note:
-      'This project was developed as an independent research initiative driven by a personal interest in medical imaging and deep learning. It was designed to explore the challenges of training deep neural networks on small, imbalanced datasets and to evaluate the effectiveness of transfer learning and explainability techniques in a clinical context.',
+      'This independent project explored deep learning for medical image classification, with particular attention to transfer learning, evaluation on limited and imbalanced data, and visual interpretation of model predictions. The results provide an experimental assessment of the approach rather than evidence of clinical validity.',
 
     links: {
       source: 'https://github.com/MeriemAfafHaddou/breast-cancer-classification',
